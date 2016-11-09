@@ -70,7 +70,7 @@ class bbcodes_display
 			$images = $this->get_images();
 		}
 
-		$bbcode_img = 'abbc3/images/icons/' . strtolower(rtrim($row['bbcode_tag'], '=')) . '.gif';
+		$bbcode_img = 'abbc3/images/icons/' . strtolower(rtrim($row['bbcode_tag'], '=')) . '.png';
 		$images_key = 'ext/' . $bbcode_img;
 
 		$custom_tags['BBCODE_IMG'] = isset($images[$images_key]) ? 'ext/vse/' . $bbcode_img : '';
@@ -138,7 +138,7 @@ class bbcodes_display
 		$finder = $this->extension_manager->get_finder();
 
 		return $finder
-			->extension_suffix('.gif')
+			->extension_suffix('.png')
 			->extension_directory('/images/icons')
 			->find_from_extension('abbc3', $this->ext_root_path);
 	}
